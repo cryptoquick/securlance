@@ -8,6 +8,13 @@
 // underscore tells Sapper not to do that.
 
 const posts = [
+	{
+		title: 'Hello, world!',
+		slug: 'hello-world',
+		html: `
+			Frisky Market is live!
+		`
+	}
 ];
 
 posts.forEach(post => {
