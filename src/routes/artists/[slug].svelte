@@ -82,6 +82,16 @@
 	{@html artist.html}
 </div>
 
+<div class='addresses'>
+	<p>Help this artist make more art!</p>
+	<dl>
+		<dt>BTC</dt>
+		<dd>{artist.addresses.btc}</dd>
+		<dt>ETH</dt>
+		<dd>{artist.addresses.eth}</dd>
+	</dl>
+</div>
+
 <div class='gallery'>
 	<ul>
 		{#each artist.gallery as image}

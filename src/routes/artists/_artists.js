@@ -24,7 +24,11 @@ const artists = [
 			'1255481292.plexadonn_roo_by_mount_garfield.jpg',
 			'1271200470.plexadonn_i-bass_j-guitar.jpg',
 			'jiujitsu01.jpg',
-		]
+		],
+		addresses: {
+			btc: '3EXQ884XMqzQsr9dT4BkQPCpJkLZb2biSg',
+			eth: '0x93B0D5e1093413C8Eec44d251FE25449E51ab89E',
+		},
 	},
 ];
 
