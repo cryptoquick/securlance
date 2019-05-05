@@ -51,14 +51,41 @@
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
 	}
+
+	.gallery {
+		margin-top: 1.5em;
+	}
+
+	.gallery img {
+		max-width: 56em;
+	}
+
+	.gallery ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	.gallery li {
+		list-style: none;
+	}
 </style>
 
 <svelte:head>
 	<title>{artist.title}</title>
 </svelte:head>
 
+<div><img src='art/{artist.slug}/{artist.logo}' alt='Logo for {artist.title}'></div>
+
 <h1>{artist.title}</h1>
 
 <div class='content'>
 	{@html artist.html}
+</div>
+
+<div class='gallery'>
+	<ul>
+		{#each artist.gallery as image}
+			<li><img src='art/{artist.slug}/{image}' alt='Art by {image.title}'></li>
+		{/each}
+	</ul>
 </div>
