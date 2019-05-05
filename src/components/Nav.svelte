@@ -4,26 +4,22 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		display: flex;
+		border-bottom: 1px solid rgba(255,62,0,0.25);
 		font-weight: 300;
-		padding: 0 1em;
+		justify-content: center;
 	}
 
 	ul {
+		display: flex;
+		margin: 0 auto;
 		margin: 0;
 		padding: 0;
 	}
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
 	li {
 		display: block;
-		float: left;
+		padding: 0 10px;
 	}
 
 	.selected {
@@ -34,7 +30,7 @@
 	.selected::after {
 		position: absolute;
 		content: '';
-		width: calc(100% - 1em);
+		width: 80px;
 		height: 2px;
 		background-color: rgb(255,62,0);
 		display: block;
@@ -42,9 +38,16 @@
 	}
 
 	a {
+		font-weight: 400;
 		text-decoration: none;
-		padding: 1em 0.5em;
+		padding: 1em 0;
+		width: 80px;
+		text-align: center;
 		display: block;
+	}
+
+	a:hover {
+		background-color: rgba(255,62,0,0.25);
 	}
 </style>
 

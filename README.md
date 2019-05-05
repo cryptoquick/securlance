@@ -1,5 +1,9 @@
 # Frisky Market
 
+[![Build status](https://ci.appveyor.com/api/projects/status/4c6o2v1ruwck4pk7?svg=true)](https://ci.appveyor.com/project/cryptoquick/frisky-market)
+
+## Local Development
+
 ```bash
 npm install
 npm run dev

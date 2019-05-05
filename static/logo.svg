@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="385" version="1.1" height="259" baseProfile="tiny">
+  <style>
+     path {
+      fill: #000;
+      stroke:	#000;
+      stroke-width:	12.5;
+     }
+    .face {
+      fill:	#e74c3c;
+    }
+    .eye {
+      fill:	none;
+    }
+  </style>
+  <g>
+    <path d="M13 9 88 132 71 185 132 203 192 247 253 203 314 185 296 131 371 9 248 42 136 42 13 9 z" class="face"/>
+    <path d="M167 159 C165 151 159 145 151 145 143 145 137 151 135 159" class="eye"/>
+    <path d="M249 159 C247 151 240 145 233 145 225 145 219 151 217 159" class="eye"/>
+    <path d="M221 225 192 251 162 225 C186 212 199 212 221 225 z"/>
+  </g>
+</svg>
