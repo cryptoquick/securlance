@@ -19,7 +19,6 @@
 
 	li {
 		display: block;
-		padding: 0 10px;
 	}
 
 	.selected {
@@ -30,20 +29,21 @@
 	.selected::after {
 		position: absolute;
 		content: '';
-		width: 80px;
+		width: 100px;
 		height: 2px;
 		background-color: rgb(255,62,0);
 		display: block;
 		bottom: -1px;
+		left: -1px;
 	}
 
 	a {
 		font-weight: 400;
 		text-decoration: none;
-		padding: 1em 0;
 		width: 80px;
 		text-align: center;
 		display: block;
+		padding: 1em 10px;
 	}
 
 	a:hover {

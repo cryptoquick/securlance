@@ -39,6 +39,12 @@
 	}
 </style>
 
+<script>
+	const signup = () => {
+		alert('Accounts not yet implemented, but you can email me at cryptoquick@pm.me')
+	}
+</script>
+
 <svelte:head>
 	<title>Frisky Market</title>
 </svelte:head>
@@ -47,4 +53,4 @@
 <h1>Frisky Market</h1>
 <p>Subscribe to artists and purchase art on Frisky Market!</p>
 <p>All sales through cryptocurrency only.</p>
-<p><button>Sign up now!</button></p>
+<p><button on:click={signup}>Sign up now!</button></p>
