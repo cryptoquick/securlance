@@ -71,7 +71,7 @@
 </style>
 
 <svelte:head>
-	<title>{artist.title}</title>
+	<title>{artist.title} on Frisky Market</title>
 </svelte:head>
 
 <div><img src='art/{artist.slug}/{artist.logo}' alt='Logo for {artist.title}'></div>

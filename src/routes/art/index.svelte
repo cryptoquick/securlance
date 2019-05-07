@@ -18,10 +18,10 @@
 </style>
 
 <svelte:head>
-	<title>Artists</title>
+	<title>Frisky Art</title>
 </svelte:head>
 
-<h1>Artists</h1>
+<h1>Frisky Art</h1>
 
 <div class='gallery'>
 	{#each artists as artist}

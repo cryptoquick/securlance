@@ -33,7 +33,7 @@
 
 <h1>{status}</h1>
 
-<p>{error.message}</p>
+<p>If this error persists, please let @cryptoquick know on Twitter!</p>
 
 {#if dev && error.stack}
 	<pre>{error.stack}</pre>
