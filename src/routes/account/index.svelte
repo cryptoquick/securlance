@@ -25,7 +25,7 @@
     width: 75%;
   }
 
-	h1 {
+	h1, p {
 		width: 100%;
 		text-align: center;
   }
@@ -61,6 +61,8 @@
 </svelte:head>
 
 <h1>Frisky Account</h1>
+
+<p>Join Frisky Market to purchase and sell art packs with crypto!</p>
 
 <div class="account">
   <form>
