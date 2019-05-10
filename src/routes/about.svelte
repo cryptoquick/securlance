@@ -1,3 +1,10 @@
+<style>
+	h1 {
+		width: 100%;
+		text-align: center;
+	}
+</style>
+
 <svelte:head>
 	<title>About Frisky Market</title>
 </svelte:head>

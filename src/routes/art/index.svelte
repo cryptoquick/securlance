@@ -15,6 +15,11 @@
 		max-width: 13em;
     max-height: 13em;
 	}
+
+	h1 {
+		width: 100%;
+		text-align: center;
+	}
 </style>
 
 <svelte:head>

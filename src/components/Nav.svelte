@@ -60,6 +60,7 @@
 		<li><a rel=prefetch class='{segment === "art" ? "selected" : ""}' href='art'>Art</a></li>
 		<li><a rel=prefetch class='{segment === "artists" ? "selected" : ""}' href='artists'>Artists</a></li>
 		<li><a rel=prefetch class='{segment === "about" ? "selected" : ""}' href='about'>About</a></li>
+		<li><a rel=prefetch class='{segment === "account" ? "selected" : ""}' href='account'>Account</a></li>
 		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>Blog</a></li>
 	</ul>
 </nav>
