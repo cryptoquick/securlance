@@ -4,19 +4,13 @@ describe('Sapper template app', () => {
 	});
 
 	it('has the correct <h1>', () => {
-		cy.contains('h1', 'Frisky Market').should('exist')
+		cy.contains('h1', 'SecurLance').should('exist')
 	});
 
-	it.skip('navigates to /art', () => {
-		cy.get('nav a').contains('Art').click();
-		cy.url().should('include', '/art');
-		cy.contains('h1', 'Art').should('exist');
-	});
-
-	it('navigates to /artists', () => {
-		cy.get('nav a').contains('Artists').click();
-		cy.url().should('include', '/artists');
-		cy.contains('h1', 'Artists').should('exist');
+	it('navigates to /invoice', () => {
+		cy.get('nav a').contains('Invoice').click();
+		cy.url().should('include', '/invoice');
+		cy.contains('h1', 'Invoice').should('exist');
 	});
 
 	it('navigates to /about', () => {
@@ -25,9 +19,9 @@ describe('Sapper template app', () => {
 		cy.contains('h1', 'About').should('exist');
 	});
 
-	it('navigates to /blog', () => {
-		cy.get('nav a').contains('Blog').click();
-		cy.url().should('include', '/blog');
-		cy.contains('h1', 'Recent posts').should('exist');
+	it('navigates to /account', () => {
+		cy.get('nav a').contains('Account').click();
+		cy.url().should('include', '/account');
+		cy.contains('h1', 'Account').should('exist');
 	});
 });

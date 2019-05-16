@@ -1,20 +1,13 @@
 <style>
-	h1, p {
+	h1, h2, p {
 		text-align: center;
 		margin: 0 auto;
 	}
 
 	h1 {
 		font-size: 2.8em;
-		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
 	}
 
 	p {
@@ -27,30 +20,25 @@
 		}
 	}
 
-	button {
+	.cta {
+		display: inline-block;
 		border: none;
-		background: rgba(255,62,0,0.25);
+		background: rgb(255, 223, 0);
 		padding: 20px;
+		margin: 20px;
 		font-size: 20px;
-	}
-
-	button:hover {
-		background: rgba(255,62,0,0.5);
 	}
 </style>
 
-<script>
-	const signup = () => {
-		alert('Accounts not yet implemented, but you can email me at cryptoquick@pm.me')
-	}
-</script>
-
 <svelte:head>
-	<title>Frisky Market</title>
+	<title>SecurLance</title>
 </svelte:head>
 
-<p><img src="/logo.svg" alt="Frisky Logo" /></p>
-<h1>Frisky Market</h1>
-<p>Subscribe to artists and purchase art on Frisky Market!</p>
-<p>All sales through cryptocurrency only.</p>
-<p><button on:click={signup}>Sign up now!</button></p>
+<h1>SecurLance</h1>
+<h2>Guaranteed Payment, Guaranteed Delivery</h2>
+<p>Create invoices that reveal your work only upon payment</p>
+
+<p>
+	<a class="cta" href="/invoice">Try now</a>
+	<a class="cta" href="/about">Learn more</a>
+</p>

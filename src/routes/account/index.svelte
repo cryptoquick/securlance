@@ -25,7 +25,7 @@
     width: 75%;
   }
 
-	h1, p {
+	h1, h2, h3 {
 		width: 100%;
 		text-align: center;
   }
@@ -57,12 +57,14 @@
 </style>
 
 <svelte:head>
-	<title>Frisky Account</title>
+	<title>SecurLance Account</title>
 </svelte:head>
 
-<h1>Frisky Account</h1>
+<h1>SecurLance Account</h1>
 
-<p>Join Frisky Market to purchase and sell art packs with crypto!</p>
+<h2>Join SecurLance</h2>
+
+<h3>Guaranteed Payment, Guaranteed Delivery</h3>
 
 <div class="account">
   <form>

@@ -35,6 +35,8 @@
 
 <p>If this error persists, please let @cryptoquick know on Twitter!</p>
 
+<!-- TODO replace with an email address, in the very least -->
+
 {#if dev && error.stack}
 	<pre>{error.stack}</pre>
 {/if}

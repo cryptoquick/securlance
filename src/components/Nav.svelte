@@ -5,7 +5,7 @@
 <style>
 	nav {
 		display: flex;
-		border-bottom: 1px solid rgba(255,62,0,0.25);
+		background: rgb(255, 223, 0);
 		font-weight: 300;
 		justify-content: center;
 	}
@@ -31,7 +31,7 @@
 		content: '';
 		width: 100px;
 		height: 2px;
-		background-color: rgb(255,62,0);
+		background-color: rgb(255, 127, 0);
 		display: block;
 		bottom: -1px;
 		left: -1px;
@@ -47,7 +47,7 @@
 	}
 
 	a:hover {
-		background-color: rgba(255,62,0,0.25);
+		background-color: rgb(255, 127, 0);
 	}
 </style>
 
@@ -56,11 +56,9 @@
 
 <nav>
 	<ul>
-		<li><a rel=prefetch class='{segment === undefined ? "selected" : ""}' href='.'>Home</a></li>
-		<li><a rel=prefetch class='{segment === "art" ? "selected" : ""}' href='art'>Art</a></li>
-		<li><a rel=prefetch class='{segment === "artists" ? "selected" : ""}' href='artists'>Artists</a></li>
+		<li><a rel=prefetch class='{segment === undefined ? "selected" : ""}' href='.'>SecurLance</a></li>
+		<li><a rel=prefetch class='{segment === "invoice" ? "selected" : ""}' href='invoice'>Invoice</a></li>
 		<li><a rel=prefetch class='{segment === "about" ? "selected" : ""}' href='about'>About</a></li>
 		<li><a rel=prefetch class='{segment === "account" ? "selected" : ""}' href='account'>Account</a></li>
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>Blog</a></li>
 	</ul>
 </nav>
