@@ -89,7 +89,6 @@
 
 <script>
   export let promise;
-  export let user;
 </script>
 
 <svelte:head>

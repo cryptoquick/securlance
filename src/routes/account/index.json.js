@@ -65,7 +65,7 @@ export async function post(req, res) {
 }
 
 export async function get(req, res) {
-	const token = req.cookies.auth
+	const token = req.cookies.auth || req.signedCookies.auth
 
 	if (token) {
 		jwt.verify(token, publicKey, { algorithms: ['ES512'] }, (err, decoded) => {
@@ -95,4 +95,8 @@ export async function get(req, res) {
 			password: '',
 		})
 	}
+}
+
+export async function del(req, res) {
+	// password reset
 }
