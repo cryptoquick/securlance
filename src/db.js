@@ -1,5 +1,5 @@
 import config from '../knexfile';
-const env = 'development';
+const env = process.env.NODE_ENV;
 import knex from 'knex';
 
 const db = knex(config[env])
