@@ -3,6 +3,8 @@ import express from 'express';
 import compression from 'compression';
 import * as sapper from '@sapper/server';
 import expressGa from 'express-ga-middleware';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
 
 const app = express()
 
@@ -11,6 +13,9 @@ const dev = NODE_ENV === 'development';
 
 app
 	.use(expressGa('UA-42266637-2'))
+	.use(bodyParser.json())
+	.use(bodyParser.urlencoded({ extended: false }))
+	.use(cookieParser())
 	.use(
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),

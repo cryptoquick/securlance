@@ -74,6 +74,10 @@ npm install -g now
 now
 ```
 
+## Generate Signatures
+
+`secret/jwt` - https://8gwifi.org/ecsignverify.jsp - P-521
+
 
 ## Using external components with webpack
 

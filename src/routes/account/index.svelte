@@ -67,7 +67,7 @@
 <h3>Guaranteed Payment, Guaranteed Delivery</h3>
 
 <div class="account">
-  <form>
+  <form action="/account.json" method="POST">
     <div class="top">
       <div class="left">
         <label for="email">Email</label>
@@ -79,7 +79,7 @@
       </div>
     </div>
     <div class="bottom">
-    <input type="submit" value="Register / Login" name="password" id="password">
+    <input type="submit" value="Register / Login">
     </div>
   </form>
 </div>
