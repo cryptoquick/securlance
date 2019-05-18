@@ -72,15 +72,12 @@
 
         if (res.ok) {
           const user = await res.json();
-          // return { user };
           resolve(user)
         } else {
-          // throw new Error(res.status);
           reject()
         }
       } catch (err) {
         reject()
-        // throw new Error(err);
       }
     })
     return { promise }
@@ -104,7 +101,6 @@
 {#await promise}
   <p>Loading...</p>
 {:then user}
-<!-- {#if user} -->
   {#if user.loggedIn}
     <div class="account">
       <form action="/account.json" method="POST">
@@ -142,9 +138,6 @@
       </form>
     </div>
   {/if}
-<!-- {:else}
-  <p>Loading...</p>
-{/if} -->
 {:catch error}
   <p>There was an error getting account data.</p>
 {/await}
