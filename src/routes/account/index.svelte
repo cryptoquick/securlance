@@ -6,6 +6,12 @@
     margin: 0 auto;
   }
 
+  @media (max-width: 1024px) {
+    form {
+      max-width: 100%;
+    }
+  }
+
   .left, .right {
     display: flex;
     flex-direction: column;
