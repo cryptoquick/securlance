@@ -11,7 +11,7 @@ const cookie = () => ({
 	domain: production ? '.securlance.com' : 'localhost',
 	secure: production,
 	httpOnly: true,
-	sameSite: true,
+	sameSite: production,
 	maxAge: 1000 * 60 * 60 * 24 * 365
 })
 
