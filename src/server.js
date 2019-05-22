@@ -10,9 +10,11 @@ const app = express()
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
+const prod = NODE_ENV === 'production';
+
+if (prod) app.use(expressGa('UA-42266637-2'))
 
 app
-	.use(expressGa('UA-42266637-2'))
 	.use(bodyParser.json())
 	.use(bodyParser.urlencoded({ extended: false }))
 	.use(cookieParser())
