@@ -39,6 +39,6 @@
 <p>Create invoices that reveal your work only upon payment</p>
 
 <p>
-	<a class="cta" href="/invoice">Try now</a>
+	<a class="cta" href="/account">Try now</a>
 	<a class="cta" href="/about">Learn more</a>
 </p>

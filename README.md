@@ -13,6 +13,7 @@
 - Node.js
   - PDF rendering
   - Image processing
+- Stripe for traditional payments
 
 ## Local Development
 

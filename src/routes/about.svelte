@@ -3,6 +3,17 @@
 		width: 100%;
 		text-align: center;
 	}
+
+	.cta {
+		display: block;
+		border: none;
+		background: rgb(255, 223, 0);
+		padding: 20px;
+		margin: 20px auto;
+		font-size: 20px;
+		width: 100px;
+		text-align: center;
+	}
 </style>
 
 <svelte:head>
@@ -18,3 +29,7 @@
 	<p>Works on PDFs, images, and code. Works on single files, entire folders, or zips.</p>
 	<p>Invoices can be paid with credit, deposit, or cryptocurrency.</p>
 </div>
+
+<p>
+	<a class="cta" href="/account">Try now</a>
+</p>
