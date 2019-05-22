@@ -7,6 +7,12 @@
 - Postgres
 - BTC Pay Server
 - Digital Ocean
+  - Managed Postgres
+  - Block Storage for BTC Full Node
+  - Object Store for Image storage
+- Node.js
+  - PDF rendering
+  - Image processing
 
 ## Local Development
 

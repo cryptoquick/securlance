@@ -39,9 +39,11 @@
   <p>Loading...</p>
 {:then user}
 	{#if user.loggedIn}
-		<h1>New Invoice</h1>
+		<h1>Your Invoices</h1>
 
-		<div>TODO - form, submit, document, processing</div>
+		<div>
+      Hi there! We haven't finished this yet. You will get an email once we do.
+    </div>
 	{:else}
 		<h1>Invoice</h1>
 

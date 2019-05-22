@@ -60,6 +60,10 @@
     padding: 0;
     font-size: 16px;
   }
+
+  .italic {
+    font-style: italic;
+  }
 </style>
 
 <script context="module">
@@ -94,10 +98,6 @@
 
 <h1>SecurLance Account</h1>
 
-<h2>Join SecurLance</h2>
-
-<h3>Guaranteed Payment, Guaranteed Delivery</h3>
-
 {#await promise}
   <p>Loading...</p>
 {:then user}
@@ -120,7 +120,13 @@
       </form>
     </div>
   {:else}
-    <div>
+    <h2>Join SecurLance</h2>
+
+    <h3>Guaranteed Payment, Guaranteed Delivery</h3>
+
+    <div class="italic">Just a heads-up, we haven't finished the product yet. By signing up, you'll get an email from us when we're finished.</div>
+
+    <div class="account">
       <form action="/account.json" method="POST">
         <div class="top">
           <div class="left">

@@ -97,6 +97,10 @@ export async function get(req, res) {
 	}
 }
 
+export async function put(req, res) {
+	// password change
+}
+
 export async function del(req, res) {
-	// password reset
+	// log out
 }
