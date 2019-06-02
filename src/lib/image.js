@@ -14,7 +14,7 @@ const client = new bitcoin({
 
 const readFile = util.promisify(fs.readFile)
 
-const init = async () => {
+export const process = async (type, data) => {
   try {
     // Get seed
     const info = await client.getBlockchainInfo()
@@ -31,12 +31,13 @@ const init = async () => {
     console.log('bin length:', bin.length)
 
     // Get image (and image dimensions)
-    const buffer = await readFile(path.resolve(process.cwd(), 'examples', 'example1.jpg'))
+    const string = data.replace(`data:${type};base64,`, '')
+    const buffer = Buffer.from(string, 'base64')
     const image = sharp(buffer)
     const metadata = await image.metadata()
     console.log('image width/height:', metadata.width, metadata.height)
 
-    const size = Math.min(metadata.width, metadata.height)
+    const size = Math.min(metadata.width, metadata.height, 1024)
 
     // Make grid pattern
     const pattern = bin.split('').reverse()
@@ -46,15 +47,16 @@ const init = async () => {
     const resized = await image.resize(size, size, 'cover')
 
     // Get blurred image
-    const blurred = await resized.clone().blur(5).toBuffer()
+    const blocks = 6
+    const blurred = await resized.clone().blur(10).toBuffer()
 
     // Composite image
-    const grid = Math.floor(size / 10)
+    const grid = Math.floor(size / blocks)
     const tiles = []
 
     let i = 0
-    for (let y = 0; y < 10; y++) {
-      for (let x = 0; x < 10; x++) {
+    for (let y = 0; y < blocks; y++) {
+      for (let x = 0; x < blocks; x++) {
         const blur = pattern[i] === '1'
 
         if (blur) {
@@ -77,11 +79,21 @@ const init = async () => {
     const sample = await resized.composite(tiles)
 
     // Save image
-    await sample.jpeg({ quality: 100 }).toFile('examples/sample1.jpg')
+    const result = await sample.jpeg({ quality: 100 }).toBuffer('examples/sample1.jpg')
+
+    return {
+      image: `data:image/jpeg;base64,${result.toString('base64')}`,
+      metadata: {
+        height: info.height,
+        hash: {
+          hex,
+          dec,
+          bin,
+        },
+      },
+    }
   }
   catch (err) {
     console.error(err)
   }
 }
-
-init()

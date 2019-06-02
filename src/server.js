@@ -15,7 +15,7 @@ const prod = NODE_ENV === 'production';
 if (prod) app.use(expressGa('UA-42266637-2'))
 
 app
-	.use(bodyParser.json())
+	.use(bodyParser.json({ limit: '100mb' }))
 	.use(bodyParser.urlencoded({ extended: false }))
 	.use(cookieParser())
 	.use(

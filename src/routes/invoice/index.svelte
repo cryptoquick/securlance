@@ -44,6 +44,10 @@
 		<div>
       Hi there! We haven't finished this yet. You will get an email once we do.
     </div>
+
+    <div>
+      <a href="/invoice/image">Upload images</a>
+    </div>
 	{:else}
 		<h1>Invoice</h1>
 
