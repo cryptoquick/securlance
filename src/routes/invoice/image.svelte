@@ -115,6 +115,7 @@
             <li>Binary:<br><textarea cols="80" rows="4">{metadata.hash.bin}</textarea></li>
           </ul>
         </li>
+        <li>Area of image obfuscated: {metadata.ratio}%</li>
       </ul>
 
       <img src={image} alt="Sample image" />

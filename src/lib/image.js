@@ -54,10 +54,12 @@ export const process = async (type, data) => {
     const grid = Math.floor(size / blocks)
     const tiles = []
 
+    let ratio = 0
     let i = 0
     for (let y = 0; y < blocks; y++) {
       for (let x = 0; x < blocks; x++) {
         const blur = pattern[i] === '1'
+        if (blur) ratio++
 
         if (blur) {
           tiles.push({
@@ -90,6 +92,7 @@ export const process = async (type, data) => {
           dec,
           bin,
         },
+        ratio: Math.trunc((ratio / 6 ** 2) * 100),
       },
     }
   }
