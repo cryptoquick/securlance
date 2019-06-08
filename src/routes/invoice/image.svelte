@@ -112,7 +112,10 @@
           <ul>
             <li>Hexadecimal: {metadata.hash.hex}</li>
             <li>Decimal: {metadata.hash.dec}</li>
-            <li>Binary:<br><textarea cols="80" rows="4">{metadata.hash.bin}</textarea></li>
+            <li>Binary:<br>
+              <textarea cols="80" rows="4" disabled>{metadata.hash.bin}</textarea>
+            </li>
+            <li>To verify, start at the least significant digit (verify in reverse).</li>
           </ul>
         </li>
         <li>Area of image obfuscated: {metadata.ratio}%</li>

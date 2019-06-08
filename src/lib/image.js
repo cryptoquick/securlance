@@ -1,6 +1,3 @@
-const fs = require('fs')
-const path = require('path')
-const util = require('util')
 const sharp = require('sharp')
 const bitcoin = require('bitcoin-core')
 
@@ -12,7 +9,7 @@ const client = new bitcoin({
   port: 443,
 })
 
-const readFile = util.promisify(fs.readFile)
+const white = { r: 255, g: 255, b: 255, alpha: 1.0 }
 
 export const process = async (type, data) => {
   try {
@@ -44,10 +41,10 @@ export const process = async (type, data) => {
     console.log('reversed pattern', pattern.join(''))
 
     // Resize image
-    const resized = await image.resize(size, size, 'cover')
+    const resized = await image.resize(size, size, { fit: 'contain', background: white })
 
     // Get blurred image
-    const blocks = 6
+    const blocks = 10
     const blurred = await resized.clone().blur(10).toBuffer()
 
     // Composite image
@@ -92,7 +89,7 @@ export const process = async (type, data) => {
           dec,
           bin,
         },
-        ratio: Math.trunc((ratio / 6 ** 2) * 100),
+        ratio: Math.trunc((ratio / blocks ** 2) * 100),
       },
     }
   }
